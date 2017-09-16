@@ -1,0 +1,66 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main {
+	padding-top: 80px !important;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+.actions input[type=submit] {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.simple_form.uploader input[type=file] {
+	border: solid 1px #eee;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+/* Flash Alerts Styling*/
+.alert{
+	margin-top: 50px !important;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+#error_explanation{
+  color: rgb(255, 87, 87) !important;
+
+}
+
+.error{
+  color: rgb(255, 87, 87) !important;
+}
+

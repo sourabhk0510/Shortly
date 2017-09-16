@@ -46,6 +46,7 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
+  config.force_ssl = (ENV['FORCE_SSL'].to_s.downcase === 'true')
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -61,10 +62,32 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "quiz_#{Rails.env}"
   config.action_mailer.perform_caching = false
+  config.assets.paths << Rails.root.join("app", "assets", "fonts")
+  config.action_mailer.asset_host = ENV["MAILER_ASSET_HOST_DEFAULT"]
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV["SMTP_ADDRESS"],
+    port: ENV["SMTP_PORT"].to_i,
+    domain: ENV["SMTP_DOMAIN"],
+    authentication: ENV["SMTP_AUTH"], #"plain",
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    # ssl: ENV['SMTP_SSL'],
+    # tls: ENV['SMTP_TLS'],
+    enable_starttls_auto: true
+  }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {
+    from: ENV['MAILER_FROM_DEFAULT']
+  }
+  config.action_mailer.default_url_options = {
+    host: ENV['MAILER_HOST_DEFAULT']
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

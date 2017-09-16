@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  database: newincity_development
+  database: quiz_development
   username: gaurav
 
 # Warning: The database defined as "test" will be erased and
@@ -15,7 +15,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: newincity_test
+  database: quiz_test
   username: gaurav
 
 # Heroku
