@@ -10,8 +10,10 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.email %></a>
 					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<% if can? :index, Poll %>
 						<%= link_to polls_path, class: "dropdown-item" do %>
 						<%= t('.polls') %>
+						<% end %>
 						<% end %>
 						<%= link_to edit_user_registration_path, class: "dropdown-item" do %>
 						<%= t('.edit_profile') %>
