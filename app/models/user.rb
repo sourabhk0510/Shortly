@@ -32,4 +32,10 @@ class User < ApplicationRecord
   enumerize :role, in: [:member, :admin, :guest], default: :member, scope: true
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
+
+  has_many :polls, foreign_key: 'creator_id'
+
+  def admin?
+  	self.role == "admin"
+  end
 end
