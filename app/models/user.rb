@@ -38,4 +38,9 @@ class User < ApplicationRecord
   def admin?
   	self.role == "admin"
   end
+
+  protected
+  def confirmation_required?
+    false
+  end
 end
