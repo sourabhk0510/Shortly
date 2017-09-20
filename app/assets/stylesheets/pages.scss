@@ -22,6 +22,16 @@
   cursor: pointer !important;
 }
 
+#short-link-wrapper{
+  p.card-text{
+    margin-top: 15px;
+    color: gray;
+  }
+  a.btn.btn-primary{
+    margin-bottom: 10px;
+  }
+}
+
 body{
   background: #563d7c;
 }

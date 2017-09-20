@@ -1,0 +1,6 @@
+<% if @link.valid? %>
+  $("#link-form-wrapper").html("<%= escape_javascript(render(partial: 'links/short_link', locals: { link: @link }))%>");
+  $(".card-link.new-url-form").click(function(){
+    $("#short-link-wrapper").html("<%= escape_javascript(render(partial: 'links/form', locals: { link: Link.new }))%>");
+  });
+<% end %>
