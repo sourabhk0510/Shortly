@@ -22,7 +22,6 @@
 #  locked_at              :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  role                   :string           default("guest")
 #
 
 require 'test_helper'

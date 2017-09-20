@@ -22,23 +22,12 @@
 #  locked_at              :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  role                   :string           default("guest")
 #
 
 class User < ApplicationRecord
-	extend Enumerize
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  enumerize :role, in: [:member, :admin, :guest], default: :member, scope: true
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
-
-  has_many :polls, foreign_key: 'creator_id'
-
-  def admin?
-  	self.role == "admin"
-  end
-
+  
   protected
   def confirmation_required?
     false

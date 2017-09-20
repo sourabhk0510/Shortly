@@ -7,5 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Creating admin"
 User.create(email: "user@email.com", password: "password", password_confirmation: "password")
-puts "Setting admin"
-User.find_by(email: "user@email.com").update_attribute(:role, "admin")
