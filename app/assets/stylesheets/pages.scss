@@ -13,6 +13,15 @@
   font-weight: 600;
 }
 
+#link_base_url-error.error{
+  margin-top: 55px;
+  position: fixed;
+}
+
+.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .btn-group:focus, .input-group-btn:not(:first-child) > .btn-group:active, .input-group-btn:not(:first-child) > .btn-group:hover{
+  cursor: pointer !important;
+}
+
 body{
   background: #563d7c;
 }

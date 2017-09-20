@@ -17,4 +17,5 @@
 //= require tether
 //= require popper
 //= require bootstrap-sprockets
+//= require jquery.validate
 //= require_tree .
