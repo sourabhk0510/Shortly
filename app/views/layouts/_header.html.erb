@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
 	<div class="container">
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -17,17 +17,6 @@
 						<%= t('.sign_out') %>
 						<% end %>
 					</div>
-				</li>
-				<% else %>
-				<li class="nav-item">
-					<%= link_to new_user_registration_path, class: "nav-link" do %>
-					<%= t('.sign_up') %>
-					<% end %>
-				</li>
-				<li class="nav-item">
-					<%= link_to new_user_session_path, class: "nav-link" do %>
-					<%= t('.login') %>
-					<% end %>
 				</li>
 				<% end %>
 			</ul>

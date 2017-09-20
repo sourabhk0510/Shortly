@@ -6,6 +6,14 @@
 	padding-top: 80px !important;
 }
 
+body{
+  background: #563d7c;
+}
+
+.navbar.navbar-toggleable-md.navbar-inverse.fixed-top{
+  background: #563d7c;
+}
+
 input[type=submit] {
 	cursor: pointer;
 }
