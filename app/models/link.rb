@@ -10,4 +10,5 @@
 #
 
 class Link < ApplicationRecord
+  validates :base_url, presence: true
 end
