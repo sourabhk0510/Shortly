@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  database: quiz_development
+  database: shortly_development
   username: gaurav
 
 # Warning: The database defined as "test" will be erased and
@@ -15,7 +15,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: quiz_test
+  database: shortly_test
   username: gaurav
 
 # Heroku

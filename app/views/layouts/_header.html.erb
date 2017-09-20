@@ -3,18 +3,13 @@
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<a class="navbar-brand" href="<%= root_path %>">quiz</a>
+		<a class="navbar-brand" href="<%= root_path %>">shortly</a>
 		<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
 				<% if current_user.present? %>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.email %></a>
 					<div class="dropdown-menu" aria-labelledby="dropdown01">
-						<% if can? :index, Poll %>
-						<%= link_to polls_path, class: "dropdown-item" do %>
-						<%= t('.polls') %>
-						<% end %>
-						<% end %>
 						<%= link_to edit_user_registration_path, class: "dropdown-item" do %>
 						<%= t('.edit_profile') %>
 						<% end %>

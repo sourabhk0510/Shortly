@@ -60,7 +60,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "quiz_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "shortly_#{Rails.env}"
   config.action_mailer.perform_caching = false
   config.assets.paths << Rails.root.join("app", "assets", "fonts")
   config.action_mailer.asset_host = ENV["MAILER_ASSET_HOST_DEFAULT"]
