@@ -1,11 +1,11 @@
 class LinksController < ApplicationController
+  load_and_authorize_resource
 
   def index
-
   end
 
   def create
-    @link = Link.create_or_find_link(link_params[:base_url], current_user.id)
+    @link = Link.create_or_find_link(link_params[:base_url], current_or_guest_user)
     respond_to do |format|
       format.js
     end

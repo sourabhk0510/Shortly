@@ -35,6 +35,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise', '~> 4.3.0'
 gem 'simple_form', '~> 3.5.0'
 gem 'annotate', '~> 2.7.2'
+gem 'cancancan', '~> 2.0'
+gem 'enumerize' , '~> 2.1.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
