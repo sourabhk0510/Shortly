@@ -18,8 +18,11 @@ ActiveRecord::Schema.define(version: 20170920200835) do
   create_table "links", force: :cascade do |t|
     t.string "base_url", default: "", null: false
     t.string "short_url", default: "", null: false
+    t.integer "clicks", default: 0, null: false
+    t.bigint "creator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_links_on_creator_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,4 +51,5 @@ ActiveRecord::Schema.define(version: 20170920200835) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "links", "users", column: "creator_id"
 end
