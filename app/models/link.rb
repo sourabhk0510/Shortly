@@ -10,5 +10,14 @@
 #
 
 class Link < ApplicationRecord
-  validates :base_url, presence: true
+  validates :base_url, presence: true, uniqueness: true
+  validates :short_url, presence: true, uniqueness: true
+
+  def self.create_or_find_link(base_url)
+    if Link.where(base_url: base_url).any?
+      Link.find_by_base_url!(base_url)
+    else
+      Link.create(base_url: base_url, short_url: SecureRandom.hex(4))
+    end
+  end
 end
