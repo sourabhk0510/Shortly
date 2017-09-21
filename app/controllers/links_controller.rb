@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
   load_and_authorize_resource
 
-  def index
+  def top
+    @links = Link.all.order('clicks DESC').first(10)
   end
 
   def create

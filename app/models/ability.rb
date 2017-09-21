@@ -17,6 +17,6 @@ class Ability
 
   def guest
     cannot :manage, :all
-    can [:index,:create,:go], Link
+    can [:top,:create,:go], Link
   end
 end

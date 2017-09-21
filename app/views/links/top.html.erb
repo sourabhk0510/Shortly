@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12">
+    <% if @links.present? %>
+    <table class="table table-striped top-links-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Original Link</th>
+          <th>Short Link</th>
+          <th>Clicks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @links.each_with_index do |link, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= link.base_url %></td>
+          <td><%= root_url + link.short_url %></td>
+          <td><%= link.clicks %></td>
+          <td><a href="<%= root_url + link.short_url %>" class="btn btn-primary" target="_blank" >Visit</a></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

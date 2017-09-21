@@ -21,7 +21,7 @@ class Link < ApplicationRecord
     if Link.where(base_url: base_url).any?
       Link.find_by_base_url!(base_url)
     else
-      Link.create(base_url: base_url, short_url: SecureRandom.hex(4), creator_id: creator.id)
+      Link.create(base_url: base_url, short_url: SecureRandom.hex(3), creator_id: creator.id)
     end
   end
 

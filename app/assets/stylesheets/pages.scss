@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+  background: #563d7c;
+}
+
 #main {
 	padding-top: 250px !important;
 }
@@ -32,8 +36,13 @@
   }
 }
 
-body{
-  background: #563d7c;
+table.top-links-table{
+  background: #fff;
+  margin-top: -100px
+}
+
+a.top-link{
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .navbar.navbar-toggleable-md.navbar-inverse.fixed-top{
