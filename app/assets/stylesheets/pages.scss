@@ -53,6 +53,19 @@ input[type=submit] {
 	cursor: pointer;
 }
 
+.btn-go{
+  font-size: 14px !important;
+}
+
+input#link_base_url{
+  font-size: 18px;
+  font-weight: 100;
+}
+
+a:hover{
+  cursor: pointer !important;
+}
+
 .actions input[type=submit] {
 	margin-top: 15px;
 	margin-bottom: 15px;

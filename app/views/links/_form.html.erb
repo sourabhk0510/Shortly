@@ -1,9 +1,9 @@
 <div id="link-form-wrapper">
   <%= simple_form_for link, url: links_path, remote: true do |f| %>
   <div class="input-group input-group-lg form-group url required link_base_url">
-    <input type="text" class="form-control string url required" type="url" value="" name="link[base_url]" id="link_base_url" placeholder="Enter url..." aria-label="Enter url...">
+    <input type="text" class="form-control string url required" type="url" value="" name="link[base_url]" id="link_base_url" placeholder="Paste a link to shorten it" aria-label="Paste a link to shorten it">
     <span class="input-group-btn">
-      <input class="btn btn-success btn-go" type="submit">
+      <input class="btn btn-success btn-go" type="submit" value="SHORTEN">
     </span>
   </div>
   <% end %>

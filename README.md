@@ -1,24 +1,45 @@
-# README
+# Shortly
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A url shortner like bit.ly
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+follow below instruction they will get you a copy of the project up and running on your local machine for development and testing purposes. This app is already deployed on heroku check * [https://shortly-link.herokuapp.com/](https://shortly-link.herokuapp.com/) 
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+What things you need to install the software before you can use it
 
-* Database creation
+```
+Ruby 2.3.1
+Rails 5.1.4
+Postgresql database and dont forget to change the database username in database.yml 
 
-* Database initialization
+```
 
-* How to run the test suite
+### Installing
 
-* Services (job queues, cache servers, search engines, etc.)
+Next steps
 
-* Deployment instructions
+```
+git clone https://github.com/sourbhk0510/shortly
+```
 
-* ...
+```
+cd shortly
+```
+
+next
+
+```
+bundle install
+```
+
+```
+rails db:create
+rails db:migrate
+rails db:seed
+rails s 
+```
+
+Now you can see the app running here [http://localhost:3000/](http://localhost:3000/) 
